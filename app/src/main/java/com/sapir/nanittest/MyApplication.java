@@ -1,7 +1,6 @@
 package com.sapir.nanittest;
 
 import android.app.Application;
-
 import com.sapir.nanittest.db.Storage;
 
 public class MyApplication extends Application {

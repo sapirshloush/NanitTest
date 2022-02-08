@@ -2,9 +2,7 @@ package com.sapir.nanittest.ui;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,17 +13,14 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.sapir.nanittest.R;
 import com.sapir.nanittest.models.BabyUser;
 import com.sapir.nanittest.utils.Consts;
 import com.sapir.nanittest.utils.Utilities;
 import com.sapir.nanittest.viewmodels.MainViewModel;
-
 import org.joda.time.Period;
 import org.joda.time.PeriodType;
-
 import java.util.Calendar;
 import java.util.Date;
 
