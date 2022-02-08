@@ -49,11 +49,17 @@ public class BirthdayActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         babyUser = (BabyUser) intent.getSerializableExtra(Consts.BABY_OBJECT);
-        updateUserName();
-        updateBirthdayYears();
-        changeScreenColorRandomly();
-        updateBirthdayYears();
-        updateBabyImage();
+        updateUI();
+    }
+
+    private void updateUI(){
+        if (babyUser != null) {
+            updateUserName();
+            updateBirthdayYears();
+            changeScreenColorRandomly();
+            updateBirthdayYears();
+            updateBabyImage();
+        }
     }
 
 
@@ -64,7 +70,9 @@ public class BirthdayActivity extends AppCompatActivity {
     }
 
     private void updateBabyImage() {
-        babyImage.setImageURI(Uri.parse(babyUser.getImagePath()));
+        if (babyUser.getImagePath() != null && !babyUser.getImagePath().isEmpty()) {
+            babyImage.setImageURI(Uri.parse(babyUser.getImagePath()));
+        }
     }
 
     private void updateBirthdayYears() {

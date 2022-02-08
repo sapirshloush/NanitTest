@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
     public void setBabyUser() {
         String name = babyName.getText().toString();
         int babyAge;
-        String image;
+        String image = null;
         Date date = Utilities.getDate(datePicker.getYear(), datePicker.getMonth(),
                 datePicker.getDayOfMonth());
         Period age = viewModel.getBabyAge(date);
@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (imagePath != null) {
             image = imagePath.toString();
-        } else {
+        } else if (babyUser != null && babyUser.getImagePath() != null) {
             image = babyUser.getImagePath();
         }
 
